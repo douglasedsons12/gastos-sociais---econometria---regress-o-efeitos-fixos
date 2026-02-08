@@ -1,21 +1,46 @@
-Este trabalho analisa como os gastos públicos municipais se relacionaram com a proporção de votos nas eleições presidenciais brasileiras de 2018 e 2022. A pesquisa busca entender o impacto de mudanças no perfil de gastos e no desenvolvimento socioeconômico (IFDM) sobre o resultado eleitoral entre mandatos.
+# Análise Econométrica: Gastos Sociais e Comportamento Eleitoral (2018-2022)
 
-    **Metodologia**
+Este repositório apresenta o resumo executivo e os resultados de uma investigação econométrica sobre os determinantes do voto presidencial nos municípios brasileiros, com foco na eficiência dos gastos públicos e indicadores socioeconômicos.
 
- **   Modelo: Efeitos Fixos (Within-Estimator) para dados em painel, controlando a heterogeneidade não observada de cada município.
+---
 
-**    Dados: Resultados eleitorais do TSE, gastos públicos por funções do SICONFI e o Índice FIRJAN de Desenvolvimento Municipal (IFDM) como variável proxy socioeconômica.
-**
-    Teste de Hausman: Confirmou a adequação do modelo de Efeitos Fixos frente ao de Efeitos Aleatórios (p<0,05).**
-​
-**    Principais Resultados
-**
-    Saúde: Gastos com atenção primária apresentaram correlação positiva e significativa com os votos no PT (pPT). Um aumento de 100 reais per capita corresponde a um aumento médio de 0,60% na pPT, ceteris paribus.
-**
-    Agricultura: Variável fortemente ligada ao bolsonarismo; um aumento de 100 reais per capita reduziu, em média, 1,4% a proporção de votos no PT.
+##  Objetivo da Pesquisa
+Analisar a correlação entre a alocação de recursos municipais (saúde, educação, agricultura) e a performance eleitoral, utilizando o **Índice FIRJAN de Desenvolvimento Municipal (IFDM)** como variável de controle para o nível de desenvolvimento local.
 
-**    Desenvolvimento (IFDM): Apresentou uma relação parabólica com o voto. Em municípios com baixo IFDM (abaixo de 0,517), o retorno para pPT é negativo, tornando-se positivo apenas em níveis mais elevados de desenvolvimento.
-**
-**    Educação: O retorno eleitoral depende do nível de desenvolvimento do município (interação com IFDM), ganhando relevância apenas em estágios superiores de desenvolvimento econômico.**
-**
+##  Metodologia e Modelagem
+Para mitigar o viés de variável omitida e controlar características intrínsecas de cada município que não variam no tempo (como tradições políticas regionais), foi utilizado um **Modelo de Efeitos Fixos (Within-Estimator)** em painel.
 
+### Especificação do Modelo
+A equação estimada seguiu a estrutura:
+
+$$pPT_{it} = \beta_{0} + \beta_{1}Gastos_{it} + \beta_{2}IFDM_{it} + \alpha_{i} + \epsilon_{it}$$
+
+Onde:
+- **$pPT$**: Proporção de votos no Partido dos Trabalhadores.
+- **$\alpha_{i}$**: Efeito fixo municipal (captura heterogeneidade não observada).
+- **Teste de Hausman**: Realizado para validar a escolha de Efeitos Fixos sobre Efeitos Aleatórios ($p < 0,05$).
+
+---
+
+##  Insights e Resultados Principais
+
+### 1. O Peso da Saúde e Agricultura
+* **Saúde (Atenção Primária):** Verificou-se um impacto positivo e estatisticamente significante. Um incremento de R$ 100 per capita em saúde está associado a um aumento médio de **0,60%** na votação do PT.
+* **Agricultura:** Atuou como um forte preditor para o voto oposto (Bolsonarismo). O aumento de gastos nesta função reduziu a proporção de votos no PT em média **1,4%** a cada R$ 100 per capita.
+
+### 2. A Curva do Desenvolvimento (IFDM)
+O impacto do desenvolvimento municipal sobre o voto não é linear, mas sim **parabólico**.
+* Municípios com **baixo desenvolvimento** (IFDM < 0,517) tendem a apresentar uma relação negativa com o voto à esquerda.
+* O retorno eleitoral torna-se positivo apenas após o município ultrapassar esse limiar crítico de desenvolvimento socioeconômico.
+
+### 3. Interação Educação e Renda
+A eficácia eleitoral dos gastos em educação mostrou-se dependente do nível de IFDM, sugerindo que o eleitor valoriza o investimento educacional de forma distinta conforme a maturidade econômica do município.
+
+---
+
+##  Documentação Relacionada
+Por motivos de propriedade intelectual e confidencialidade de pesquisa, o código-fonte e a base de dados não estão públicos. 
+* [Visualizar Resumo Técnico (PDF)](./Parte_Escrita.pdf)
+
+---
+**Instituição:** Faculdade de Ciências Econômicas (FACE/UFMG)  
