@@ -2,7 +2,7 @@
 
 Este repositório apresenta o resumo executivo e os resultados de uma investigação econométrica sobre os determinantes do voto presidencial nos municípios brasileiros, com foco na eficiência dos gastos públicos e indicadores socioeconômicos.
 
-Para visualizar o esboço da pesquisa, o consultar * [Visualizar Resumo Técnico (PDF)](./Parte_Escrita.pdf)
+Para visualizar o esboço da pesquisa, o consultar  [Visualizar Resumo Técnico (PDF)](./Parte_Escrita.pdf)
 
 ---
 
